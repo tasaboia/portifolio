@@ -38,7 +38,9 @@ export default function Home() {
             Frontend Developer
           </Typography>
           <Typography  fontSize='1rem'> I'm a Front-end Web Developer so I can work on projects that influence people all over the world.</Typography>
-          <Button variant="outlined" onClick={() => console.log('aqui')} >Let's talk</Button>
+          <Stack paddingTop={2} maxWidth={200} alignSelf='flex-end'>
+            <Button variant="outlined" onClick={() => console.log('aqui')} >Let's talk</Button>
+          </Stack>
         
         </Stack>
         
