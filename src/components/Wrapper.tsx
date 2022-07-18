@@ -19,10 +19,10 @@ export default function Wrapper({children} : Props) {
         <Nav/>
         <Stack position='fixed' top='70vh' left='1vh' display='flex' flexDirection='row' justifyContent='space-between' alignItems='flex-end'>
             <Stack display='flex' flexDirection='column'>
-                <Link href='#'><LinkedInIcon/></Link>
-                <Link href='#'><GitHubIcon/></Link>
-                <Link href='#'><TwitterIcon /></Link>
-                <Link  href='#'><InstagramIcon /></Link>
+                <Link href='https://www.linkedin.com/in/tainasaboia/' target="_blank" rel="noopener noreferrer"><LinkedInIcon/></Link>
+                <Link href='https://github.com/tasaboia' target="_blank" rel="noopener noreferrer"><GitHubIcon/></Link>
+                <Link href='https://twitter.com/tainasaboia' target="_blank" rel="noopener noreferrer"><TwitterIcon /></Link>
+                <Link href='https://www.instagram.com/tasaboia/' target="_blank" rel="noopener noreferrer"><InstagramIcon /></Link>
                 <Box
                     alignSelf='center'
                     width={5}
