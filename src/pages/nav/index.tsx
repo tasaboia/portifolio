@@ -19,7 +19,7 @@ export default function Nav() {
               <Link href="#home" underline="none">Home</Link>
               <Link href="#sobre" underline="none">Sobre</Link>
               <Link href="#projects" underline="none">Projetos</Link>
-              <Link href="#ontact" underline="none">Contato</Link>
+              <Link href="#contact" underline="none">Contato</Link>
               <Link href='#'><LinkedInIcon/></Link>
               <Link href='#'><GitHubIcon/></Link>
               <Link href='#'><TwitterIcon /></Link>

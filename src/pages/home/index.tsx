@@ -1,4 +1,4 @@
-import { Avatar, Button, Stack, Typography } from '@mui/material'
+import { Avatar, Button, Link, Stack, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import { useFonts } from 'expo-font';
@@ -23,12 +23,14 @@ export default function Home() {
         height='100%'
       >
         <Stack 
-          sx={{ maxWidth:{ xs: '100%', sm: '50%'}}}
-          textAlign={{
+        sx={{ width:{ xs: '100%', lg: '40%'},
+          textAlign:{
             xs: 'center',
             sm: 'center',
             md: 'end'
-          }} 
+          },
+        }}
+
           spacing={2}
         >
           <Typography fontSize='1rem'> Tainá Saboia </Typography>
@@ -38,9 +40,22 @@ export default function Home() {
             }}> 
             Frontend Developer
           </Typography>
-          <Typography  fontSize='1rem'> I'm a Front-end Web Developer so I can work on projects that influence people all over the world.</Typography>
-          <Stack paddingTop={2} maxWidth={200} alignSelf='flex-end'>
-            <Button variant="outlined" onClick={() => console.log('aqui')} >Let's talk</Button>
+          <Stack
+            sx={{ 
+              width:{ xs: '100%', sm: '40%'},
+              alignSelf: {
+                xs: 'center',
+                md: 'flex-end'
+            }}}>
+            <Typography   fontSize='1rem'> I'm a Front-end Web Developer so I can work on projects that influence people all over the world.</Typography>
+          </Stack>
+          <Stack paddingTop={2} maxWidth={200}  
+            sx={{ 
+              alignSelf: {
+                xs: 'center',
+                md: 'flex-end'
+            }}}>
+            <Typography >Let's talk</Typography>
           </Stack>
         
         </Stack>

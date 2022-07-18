@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <section id='contact'>
       <Stack
-      height='100vh'
+      height='100%'
       display='flex'
     >
       <Stack width='100%' alignItems='center' alignSelf='center'>
