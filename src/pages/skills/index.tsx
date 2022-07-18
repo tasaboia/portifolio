@@ -11,12 +11,12 @@ export default function Skills() {
             flexDirection: 'column',
           }}
         >
-          <Stack width='100%' alignItems={{base:'start', sm:'center'}}spacing={2}  padding={10}>
+          <Stack width='100%' alignItems={{base:'start', sm:'center'}} spacing={2} paddingLeft={6} paddingTop={10}>
             <Typography  sx={{fontSize:{xs: '3rem', sm: '4rem'}}}> Habilidades e Ferramentas </Typography>
             <Typography fontSize='1rem'>Minha caixa de ferramentas e coisas que posso fazer:</Typography>
           </Stack>
 
-            <Grid container direction="row" flexWrap='wrap'  sx={{padding:{ xs: 2, sm: 2}, justifyContent:{xs: 'flex-start', sm:'center'}}}>
+            <Grid container direction="row" flexWrap='wrap'  sx={{paddingLeft:{ xs: 4, sm: 2}, justifyContent:{xs: 'flex-start', sm:'center'}}}>
               {['React Js','JavaScript', 'TypeScript','HTML5', 'CSS', 'Python', 'Django', 'VS Code', 'Git', 'Illustrator', 'Photoshop'].map((title, key) => (
                 <Grid item key={key+'grid'} textAlign='center' >
                     <Avatar key={key} alt="photo perfil" src={require(`../../assets/icons/${title}.png`)} style={{ width:80, height: 'auto'}} />
