@@ -3,8 +3,14 @@ import { Box, Button, FormControl, FormHelperText, InputLabel, Paper, Stack, Tex
 import Footer from '../footer'
 import { useCustomTheme } from '../../context'
 
+import { useFonts } from 'expo-font';
+
 export default function Contact() {
   const {dark} = useCustomTheme()
+  let [fontsLoaded] = useFonts({
+    'Inter-SemiBoldItalic': 'https://rsms.me/inter/font-files/Inter-SemiBoldItalic.otf?v=3.12',
+  })
+ 
   return (
     <section id='contact'>
       <Stack
@@ -13,7 +19,7 @@ export default function Contact() {
     >
       <Stack width='100%' paddingTop={10} alignItems='center' >
         <Stack textAlign='center' >
-          <Typography fontSize='3rem'>
+          <Typography fontSize='3rem' fontFamily='Inter-SemiBoldItalic'>
             Entre em contato
           </Typography>
           <Typography paddingX={5} paddingY={2} color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> Preencha o formulário abaixo para esclarermos suas dúvidas e dar início ao seu projeto! </Typography>

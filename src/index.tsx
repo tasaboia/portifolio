@@ -13,7 +13,8 @@ import Contact from "./pages/contact";
 const getDesignTokens = (dark : boolean | undefined) => ({
   palette: {
     text: {
-            primary: dark ? '#00FFF0' : '#000',
+        primary: dark ? '#00FFF0' : '#000',
+        secondary: dark ? '#00FFF0' : '#000',
     },
   },
   

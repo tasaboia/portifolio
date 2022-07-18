@@ -1,9 +1,15 @@
 import React from 'react'
 import { Avatar, Box,  Grid, Stack, Typography } from '@mui/material'
 import { useCustomTheme } from '../../context'
-
+import { useFonts } from 'expo-font';
 export default function Skills() {
   const { dark } = useCustomTheme()
+
+
+  let [fontsLoaded] = useFonts({
+    'Inter-SemiBoldItalic': 'https://rsms.me/inter/font-files/Inter-SemiBoldItalic.otf?v=3.12',
+  });
+  
   return (
     <section id='sobre'>
       <Stack height='100vh' >
@@ -14,7 +20,7 @@ export default function Skills() {
           }}
         >
           <Stack width='100%' alignItems={{base:'start', sm:'center'}} spacing={2} paddingLeft={6} paddingTop={10}>
-            <Typography  sx={{fontSize:{xs: '3rem', sm: '4rem'}}}> Habilidades e Ferramentas </Typography>
+            <Typography fontFamily='Inter-SemiBoldItalic' sx={{fontSize:{xs: '2rem', sm: '3rem'}}}> Habilidades e Ferramentas </Typography>
             <Typography color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'>Minha caixa de ferramentas e coisas que posso fazer:</Typography>
           </Stack>
 

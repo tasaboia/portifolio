@@ -7,22 +7,24 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import MenuHome from './components/Menu';
 import SwitchMode from '../../components/SwitchMode';
+import { useCustomTheme } from '../../context';
 
 export default function Nav() {
+  const { dark } = useCustomTheme()
     return (
     <div>
       <AppBar color='transparent'>
         <Container maxWidth="xl">
           <Toolbar>
             <Stack spacing={4} direction="row" sx={{ flexGrow: 1, justifyContent: 'center', display: { xs: 'none', md: 'flex'} }} >
-              <Link href="#home" underline="none">Home</Link>
-              <Link href="#sobre" underline="none">Sobre</Link>
-              <Link href="#projects" underline="none">Projetos</Link>
-              <Link href="#contact" underline="none">Contato</Link>
-              <Link href='https://www.linkedin.com/in/tainasaboia/' target="_blank" rel="noopener noreferrer"><LinkedInIcon/></Link>
-              <Link href='https://github.com/tasaboia' target="_blank" rel="noopener noreferrer"><GitHubIcon/></Link>
-              <Link href='https://twitter.com/tainasaboia' target="_blank" rel="noopener noreferrer"><TwitterIcon /></Link>
-              <Link href='https://www.instagram.com/tasaboia/' target="_blank" rel="noopener noreferrer"><InstagramIcon /></Link>
+              <Link color={ dark ? '#59C8D4' : "#000"} href="#home" underline="none">Home</Link>
+              <Link color={ dark ? '#59C8D4' : "#000"} href="#sobre" underline="none">Sobre</Link>
+              <Link color={ dark ? '#59C8D4' : "#000"} href="#projects" underline="none">Projetos</Link>
+              <Link color={ dark ? '#59C8D4' : "#000"} href="#contact" underline="none">Contato</Link>
+              <Link color={ dark ? '#59C8D4' : "#000"} href='https://www.linkedin.com/in/tainasaboia/' target="_blank" rel="noopener noreferrer"><LinkedInIcon/></Link>
+              <Link color={ dark ? '#59C8D4' : "#000"} href='https://github.com/tasaboia' target="_blank" rel="noopener noreferrer"><GitHubIcon/></Link>
+              <Link color={ dark ? '#59C8D4' : "#000"} href='https://twitter.com/tainasaboia' target="_blank" rel="noopener noreferrer"><TwitterIcon /></Link>
+              <Link color={ dark ? '#59C8D4' : "#000"} href='https://www.instagram.com/tasaboia/' target="_blank" rel="noopener noreferrer"><InstagramIcon /></Link>
             </Stack>
             <MenuHome/>
             <Stack direction='column' alignSelf='flex-end'>

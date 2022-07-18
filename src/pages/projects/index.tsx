@@ -1,10 +1,13 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Stack, Typography , Link} from '@mui/material'
 import React from 'react'
+import { useFonts } from 'expo-font';
 import { useCustomTheme } from '../../context'
 
 export default function Projects() {
   const { dark } = useCustomTheme()
-
+  let [fontsLoaded] = useFonts({
+    'Inter-SemiBoldItalic': 'https://rsms.me/inter/font-files/Inter-SemiBoldItalic.otf?v=3.12',
+  });
   return (
     <section id='projects'>
       <Stack>
@@ -16,7 +19,7 @@ export default function Projects() {
         height='100vh'
       >
         <Stack paddingTop={10} textAlign='center'>
-          <Typography fontSize='4rem'>Projetos</Typography>
+          <Typography fontFamily='Inter-SemiBoldItalic' sx={{fontSize:{xs: '2rem', sm: '3rem'}}}>Projetos</Typography>
         </Stack>
           <Grid container sx={{ paddingLeft:{xs:0, sm: 1} , flexDirection: {xs: 'column', sm: 'row'}}} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} textAlign='center' justifyContent='center'>
             <Grid item sx={{ alignSelf:{xs:'center'}}}>
