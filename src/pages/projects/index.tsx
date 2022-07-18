@@ -12,7 +12,7 @@ export default function Projects() {
         }}
         height='100vh'
       >
-        <Stack padding={10} textAlign='center'>
+        <Stack paddingTop={10} textAlign='center'>
           <Typography fontSize='4rem'>Projetos</Typography>
         </Stack>
           <Grid container sx={{ paddingLeft:{xs:15, sm: 1} , flexDirection: {xs: 'column', sm: 'row'}}} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} justifyContent='center'>
