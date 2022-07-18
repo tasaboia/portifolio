@@ -2,10 +2,11 @@ import { Avatar, Button, Link, Stack, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import { useFonts } from 'expo-font';
+import { useCustomTheme } from '../../context';
 
   
 export default function Home() {
-  
+  const {dark} = useCustomTheme()
   let [fontsLoaded] = useFonts({
     'Inter-SemiBoldItalic': 'https://rsms.me/inter/font-files/Inter-SemiBoldItalic.otf?v=3.12',
   });
@@ -33,7 +34,7 @@ export default function Home() {
 
           spacing={2}
         >
-          <Typography fontSize='1rem'> Tainá Saboia </Typography>
+          <Typography color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> Tainá Saboia </Typography>
           <Typography fontFamily='Inter-SemiBoldItalic' 
             sx={{ 
             fontSize: { xs: '2rem', sm: '3rem', md:'4rem' }
@@ -47,7 +48,7 @@ export default function Home() {
                 xs: 'center',
                 md: 'flex-end'
             }}}>
-            <Typography   fontSize='1rem'> I'm a Front-end Web Developer so I can work on projects that influence people all over the world.</Typography>
+            <Typography color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> I'm a Front-end Web Developer so I can work on projects that influence people all over the world.</Typography>
           </Stack>
           <Stack paddingTop={2} maxWidth={200}  
             sx={{ 

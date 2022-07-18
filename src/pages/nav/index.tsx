@@ -6,10 +6,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import MenuHome from './components/Menu';
-
+import SwitchMode from '../../components/SwitchMode';
 
 export default function Nav() {
-  
     return (
     <div>
       <AppBar color='transparent'>
@@ -26,6 +25,7 @@ export default function Nav() {
               <Link href='https://www.instagram.com/tasaboia/' target="_blank" rel="noopener noreferrer"><InstagramIcon /></Link>
             </Stack>
             <MenuHome/>
+            <SwitchMode/>
           </Toolbar>
         </Container>
       </AppBar>
