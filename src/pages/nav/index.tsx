@@ -31,14 +31,14 @@ export default function Nav() {
 
   return (
     <div>
-      <AppBar  color='transparent'>
+      <AppBar color='transparent'>
         <Container maxWidth="xl">
           <Toolbar>
             <Stack spacing={4} direction="row" sx={{ flexGrow: 1, justifyContent: 'center', display: { xs: 'none', md: 'flex'} }} >
-              <Link href="#" underline="none">Home</Link>
-              <Link href="#" underline="none">Sobre</Link>
-              <Link href="#" underline="none">Projetos</Link>
-              <Link href="#" underline="none">Contato</Link>
+              <Link href="#home" underline="none">Home</Link>
+              <Link href="#sobre" underline="none">Sobre</Link>
+              <Link href="#projects" underline="none">Projetos</Link>
+              <Link href="#contact" underline="none">Contato</Link>
               <Link href='#'><LinkedInIcon/></Link>
               <Link href='#'><GitHubIcon/></Link>
               <Link href='#'><TwitterIcon /></Link>

@@ -7,6 +7,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import MailIcon from '@mui/icons-material/Mail';
 import { Box } from '@mui/system';
+import Nav from '../pages/nav';
 
 export interface Props  { 
     children: React.ReactNode | React.ReactNode[]
@@ -15,6 +16,7 @@ export interface Props  {
 export default function Wrapper({children} : Props) {
   return (
     <Stack>
+        <Nav/>
         <Stack position='fixed' top='70vh' left='1vh' display='flex' flexDirection='row' justifyContent='space-between' alignItems='flex-end'>
             <Stack display='flex' flexDirection='column'>
                 <Link href='#'><LinkedInIcon/></Link>

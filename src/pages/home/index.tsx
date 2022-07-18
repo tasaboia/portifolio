@@ -10,6 +10,7 @@ export default function Home() {
     'Inter-SemiBoldItalic': 'https://rsms.me/inter/font-files/Inter-SemiBoldItalic.otf?v=3.12',
   });
   return (
+    <section id='home'>
     <Stack padding={10} height='100vh'>
       <Box
         flexWrap='wrap'
@@ -63,5 +64,6 @@ export default function Home() {
       </Box>
       
     </Stack>
+    </section>
   )
 }
