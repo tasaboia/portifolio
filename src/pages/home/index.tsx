@@ -64,18 +64,14 @@ export default function Home() {
         <Stack 
           sx={{ 
             display: { xs: 'flex', sm: 'flex' },
+            maxWidth:{ xs: '100%' , sm: '45%'},
             padding: {xs:2, sm: 5, md: 10 }
           }}
           direction='row'
           justifyContent='center'
           >
-          <Avatar alt="photo perfil" src="https://tainasaboia.netlify.app/images/profile-photo.png"
-            style={{ 
-                minWidth: 250,
-                minHeight: 250,
-                maxWidth: 350,
-                maxHeight: 350,
-              }} />
+           <img  style={{ width: '100%', height: 'auto'}} src={require('../../assets/images/profile-photo.png')}/>
+              
         </Stack>
       </Box>
       
