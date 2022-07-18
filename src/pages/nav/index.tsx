@@ -25,7 +25,9 @@ export default function Nav() {
               <Link href='https://www.instagram.com/tasaboia/' target="_blank" rel="noopener noreferrer"><InstagramIcon /></Link>
             </Stack>
             <MenuHome/>
-            <SwitchMode/>
+            <Stack direction='column' alignSelf='flex-end'>
+              <SwitchMode/>
+            </Stack>
           </Toolbar>
         </Container>
       </AppBar>

@@ -8,17 +8,18 @@ export default function Contact() {
   return (
     <section id='contact'>
       <Stack
-      height='100%'
+      height='100vh'
       display='flex'
     >
-      <Stack width='100%' alignItems='center' alignSelf='center'>
-        <Stack padding={10} textAlign='center'>
+      <Stack width='100%' paddingTop={10} alignItems='center' >
+        <Stack textAlign='center' >
           <Typography fontSize='3rem'>
             Entre em contato
           </Typography>
+          <Typography paddingX={5} paddingY={2} color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> Preencha o formulário abaixo para esclarermos suas dúvidas e dar início ao seu projeto! </Typography>
         </Stack>
         
-        <Box bgcolor ={dark ? '#9093D8' : ''} padding={4} boxShadow={2} borderRadius={10} >
+        <Box  marginY={5}  bgcolor ={dark ? '#9093D8' : ''} padding={4} boxShadow={2} borderRadius={10} >
           <Stack justifyItems='center' sx={{ width: { sx: '60vh', sm: '80vh' } }}>
               <FormControl>
                 <TextField name='name' id="name" label="Digite seu nome" variant="standard" />
@@ -35,7 +36,11 @@ export default function Contact() {
 
       </Stack>
     </Stack>
-    <Footer />
+      <Stack height='10vh' bgcolor={ dark ? '#9093D8': 'black' } paddingTop={3} >
+        <Typography color={ dark ? '#59C8D4': 'white' }  textAlign='center' >
+            © Copyright 2022.
+          </Typography>
+      </Stack>
     </section>
 
   ) 

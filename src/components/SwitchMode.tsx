@@ -6,6 +6,8 @@ import Switch, { SwitchProps } from '@mui/material/Switch';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { useCustomTheme } from '../context';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -58,11 +60,9 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 export default function SwitchMode() {
 const {dark, setDark} = useCustomTheme()
   return (
-    <div>
-        <FormControlLabel
+        <FormControlLabel 
         control={<MaterialUISwitch sx={{ m: 1 }} onChange={() => setDark(!dark)} />}
         label=""
       />
-    </div>
   )
 }
