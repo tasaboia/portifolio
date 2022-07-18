@@ -1,9 +1,5 @@
 import React from 'react'
-import { Avatar, Box, Card, CardContent, CardMedia, Grid, ImageList, ImageListItem, ImageListItemBar, List, ListItem, Stack, Typography } from '@mui/material'
-import { FlatList } from 'react-native'
-import { height } from '@mui/system'
-
-const skillsList = ['DJANGO','GIT','GITHUB', 'HTML5','JAVASCRIPT','PYTHON','REACT', 'TYPESCRIPT']
+import { Avatar, Box,  Grid, Stack, Typography } from '@mui/material'
 
 export default function Skills() {
   return (
