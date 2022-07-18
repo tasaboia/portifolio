@@ -15,13 +15,13 @@ export default function Projects() {
         <Stack padding={10} textAlign='center'>
           <Typography fontSize='4rem'>Projetos</Typography>
         </Stack>
-          <Grid padding={5} container sx={{ flexDirection: {xs: 'column', sm: 'row'}}} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} justifyContent='center'>
+          <Grid container sx={{ paddingLeft:{xs:15, sm: 1} , flexDirection: {xs: 'column', sm: 'row'}}} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} justifyContent='center'>
             <Grid item>
-              <Card sx={{ maxWidth: 300 }}>
+              <Card sx={{ maxWidth: 250 }}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="200"
+                    height="150"
                     image={require('../../assets/images/coletiva-background-2.png')}
                     alt="Importa Coleta"
                   />
@@ -35,11 +35,11 @@ export default function Projects() {
               </Card>
             </Grid>
             <Grid item>
-              <Card sx={{ maxWidth: 300 }}>
+              <Card sx={{ maxWidth: 250 }}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="200"
+                    height="150"
                     image={require('../../assets/images/app-background.png')}
                     alt="RMCenter App"
                   />

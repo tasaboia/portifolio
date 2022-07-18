@@ -12,7 +12,7 @@ export default function Skills() {
           }}
         >
           <Stack width='100%' alignItems={{base:'start', sm:'center'}}spacing={2}  padding={10}>
-            <Typography  fontSize='2rem'> Habilidades e Ferramentas </Typography>
+            <Typography  sx={{fontSize:{xs: '3rem', sm: '4rem'}}}> Habilidades e Ferramentas </Typography>
             <Typography fontSize='1rem'>Minha caixa de ferramentas e coisas que posso fazer:</Typography>
           </Stack>
 
