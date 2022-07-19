@@ -9,7 +9,7 @@ export default function RoutesContainer() {
   return (
     <Routes>
         <Route>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Skills />} />
             <Route path="/projetos" element={<Projects />} />
             <Route path="/contato" element={<Contact />} />

@@ -24,14 +24,7 @@ export default function Contact() {
           </Typography>
           <Typography paddingX={5} paddingY={2} color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> Preencha o formulário abaixo para esclarermos suas dúvidas e dar início ao seu projeto! </Typography>
         </Stack>
-        <Stack sx={{display: {xs: 'none', md: 'contents'}}}>
-          <Stack  position='absolute' width='100%' height='100vh' justifyContent='center'  alignContent='center' alignItems='flex-start'>
-              <Avatar alt="photo perfil" src={require('../../assets/3D/talk-2.png')} style={{ width:'25%', height: 'auto'}} />
-            </Stack>
-            <Stack  position='absolute' width='100%' height='100vh' justifyContent='center'  alignContent='center' alignItems='flex-end'>
-              <Avatar alt="photo perfil" src={require('../../assets/3D/talk.png')} style={{ width:'25%', height: 'auto'}} />
-            </Stack>
-        </Stack>
+        
         <Box  marginY={5}  bgcolor ={dark ? '#9093D8' : ''} padding={4} boxShadow={2} borderRadius={10} >
           <Stack justifyItems='center' sx={{ width: { sx: '60vh', sm: '80vh' } }}>
               <FormControl>

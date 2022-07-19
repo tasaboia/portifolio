@@ -31,39 +31,42 @@ export interface Props  {
 export default function Wrapper({ children} : Props) {
    const {dark, setDark} = useCustomTheme()
   return (
-    <Paper sx={{
-        backgroundColor: dark? '65043d' : '#FFF' , 
-        backgroundImage: dark ? 'linear-gradient(90deg, #551838 0%, #401e5d 50%, #000459 100%)' : null}}>
-    <Stack>
-        <Nav/>  
-        <Stack position='fixed' top='70vh' left='1vh' display='flex' flexDirection='row' justifyContent='space-between' alignItems='flex-end'>
-            <Stack display='flex' flexDirection='column'>
-                <Link color={ dark ? '#59C8D4' : "#000"} href='https://www.linkedin.com/in/tainasaboia/' target="_blank" rel="noopener noreferrer"><LinkedInIcon/></Link>
-                <Link color={ dark ? '#59C8D4' : "#000"} href='https://github.com/tasaboia' target="_blank" rel="noopener noreferrer"><GitHubIcon/></Link>
-                <Link color={ dark ? '#59C8D4' : "#000"} href='https://twitter.com/tainasaboia' target="_blank" rel="noopener noreferrer"><TwitterIcon /></Link>
-                <Link color={ dark ? '#59C8D4' : "#000"} href='https://www.instagram.com/tasaboia/' target="_blank" rel="noopener noreferrer"><InstagramIcon /></Link>
-                <Box
-                    alignSelf='center'
-                    width={5}
-                    height={100}
-                    bgcolor={ dark ? '#59C8D4' : "#000"}
-                />
+    <Paper
+    sx={{
+    backgroundColor: dark? '65043d' : '#FFF' , 
+    backgroundImage: dark ? 'linear-gradient(90deg, #551838 0%, #401e5d 50%, #000459 100%)' : null}}>
+        <Stack width='100%' height='100%'>
+            <Nav/>  
+            {/* left */}
+            <Stack position='fixed' top='70vh' left='1vh' display='flex' flexDirection='row' justifyContent='space-between' alignItems='flex-end'>
+                <Stack display='flex' flexDirection='column'>
+                    <Link color={ dark ? '#59C8D4' : "#000"} href='https://www.linkedin.com/in/tainasaboia/' target="_blank" rel="noopener noreferrer"><LinkedInIcon/></Link>
+                    <Link color={ dark ? '#59C8D4' : "#000"} href='https://github.com/tasaboia' target="_blank" rel="noopener noreferrer"><GitHubIcon/></Link>
+                    <Link color={ dark ? '#59C8D4' : "#000"} href='https://twitter.com/tainasaboia' target="_blank" rel="noopener noreferrer"><TwitterIcon /></Link>
+                    <Link color={ dark ? '#59C8D4' : "#000"} href='https://www.instagram.com/tasaboia/' target="_blank" rel="noopener noreferrer"><InstagramIcon /></Link>
+                    <Box
+                        alignSelf='center'
+                        width={5}
+                        height={100}
+                        bgcolor={ dark ? '#59C8D4' : "#000"}
+                    />
+                </Stack>
             </Stack>
+            
+            {/* Rigth */}
+            <Stack position='fixed' top='83vh' maxWidth={0.5} right='2vh'>
+                <Typography >
+                    <Link color={ dark ? '#59C8D4' : "#000"} href="#contact" underline="none"><MailIcon /></Link>
+                </Typography>
+                <Box
+                        alignSelf='center'
+                        width={5}
+                        height={100}
+                        bgcolor={ dark ? '#59C8D4' : "#000"}
+                    />
+            </Stack>
+            {children}
         </Stack>
-
-        <Stack position='fixed' top='83vh' maxWidth={0.5} right='2vh'>
-            <Typography >
-                <Link color={ dark ? '#59C8D4' : "#000"} href="#contact" underline="none"><MailIcon /></Link>
-            </Typography>
-            <Box
-                    alignSelf='center'
-                    width={5}
-                    height={100}
-                    bgcolor={ dark ? '#59C8D4' : "#000"}
-                />
-        </Stack>
-        {children}
-    </Stack>
     </Paper>
   )
 }

@@ -12,8 +12,11 @@ export default function Home() {
   });
   return (
     <section id='home'>
-    <Stack padding={10} height='100vh'>
+    <Stack 
+      position='static'
+    >
       <Box
+        margin={10}
         flexWrap='wrap'
         sx={{
           display: 'flex',
@@ -21,7 +24,6 @@ export default function Home() {
         }}
         justifyContent='center'
         alignItems='center'
-        height='100%'
       >
         <Stack 
         sx={{ width:{ xs: '100%', lg: '40%'},
@@ -64,18 +66,18 @@ export default function Home() {
         <Stack 
           sx={{ 
             display: { xs: 'flex', sm: 'flex' },
-            maxWidth:{ xs: '100%' , sm: '45%'},
+            maxWidth:{ xs: '100%' , sm: '50%'},
             padding: {xs:2, sm: 5, md: 10 }
           }}
           direction='row'
           justifyContent='center'
           >
-           <img  style={{ width: '100%', height: 'auto'}} src={require('../../assets/images/profile-photo.png')}/>
+           <Avatar variant="square" style={{ width: '88%', height: 'auto'}} src={require('../../assets/images/profile-photo.png')}/>
               
         </Stack>
       </Box>
       
     </Stack>
-    </section>
+    </section> 
   )
 }

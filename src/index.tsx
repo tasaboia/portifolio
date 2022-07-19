@@ -9,6 +9,7 @@ import Home from "./pages/home";
 import Skills from "./pages/skills";
 import Projects from "./pages/projects";
 import Contact from "./pages/contact";
+import RoutesContainer from "./routes";
 
 const getDesignTokens = (dark : boolean | undefined) => ({
   palette: {
@@ -20,7 +21,6 @@ const getDesignTokens = (dark : boolean | undefined) => ({
   
 });
 
-
 export default function Site() {
   
 const {dark} = useCustomTheme()
@@ -31,6 +31,7 @@ const theme = createTheme(getDesignTokens(dark));
         <ThemeProvider theme={theme}>
           <BrowserRouter>
               <Wrapper>
+                {/* <RoutesContainer/> */}
                 <Home/>
                 <Skills/>
                 <Projects/>

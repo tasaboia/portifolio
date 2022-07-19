@@ -61,9 +61,6 @@ export default function Projects() {
               </Card>
             </Grid>
           </Grid>
-          <Stack  position='absolute' width='100%' height='100vh' justifyContent='flex-end'  alignContent='center' alignItems='flex-end'>
-            <Avatar alt="photo perfil" src={require('../../assets/3D/pc.png')} style={{ width:450, height: 'auto'}} />
-          </Stack>
       </Box>
     </Stack>
   </section>
