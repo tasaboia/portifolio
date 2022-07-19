@@ -39,9 +39,9 @@ export default function Home() {
           <Typography color={ dark ? '#9093D8' : '#7A7A7A'} fontSize='1rem'> Tainá Saboia </Typography>
           <Typography fontFamily='Impact' 
             sx={{ 
-            fontSize: { xs: '2rem', sm: '3rem', md:'6rem' }
+            fontSize: { xs: '2.5rem', sm: '3rem', md:'4rem' }
             }}> 
-            Frontend Developer
+            Desenvolvedora Frontend
           </Typography>
           <Stack
             sx={{ 
@@ -50,7 +50,7 @@ export default function Home() {
                 xs: 'center',
                 md: 'flex-end'
             }}}>
-            <Typography color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> I'm a Front-end Web Developer so I can work on projects that influence people all over the world.</Typography>
+            <Typography color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> Eu sou uma Desenvolvedora Frontend para trabalhar em projetos que podem influenciar pessoas por todo o mundo.</Typography>
           </Stack>
           <Stack paddingTop={2} maxWidth={200}  
             sx={{ 

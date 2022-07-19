@@ -3,8 +3,12 @@ import { Avatar, Box,  Divider,  Grid, Link, Stack, Typography } from '@mui/mate
 import { useCustomTheme } from '../../context'
 import { useFonts } from 'expo-font';
 import LineTitle from '../../components/LineTitle';
-import SkillsItem from '../../components/SkillsItem';
+import TitleLine from '../../components/TitleLine';
+import TitleBody from '../home/components/TitleBody';
 
+const skills = ['React Js','JavaScript', 'TypeScript','HTML5', 'CSS', 'Python', 'Django', 'VS Code', 'Git', 'Illustrator', 'Photoshop']
+
+const description = "Eu sou Tainá Saboia, formada em Análise de Sistema pela Faculdade de Tecnologia de São Paulo, entrei nessa aventura de desenvolviemnto de software em 2009. Hoje trabalho com desenvolvimento Frontend"
 export default function Skills() {
   const { dark } = useCustomTheme()
 
@@ -27,21 +31,17 @@ export default function Skills() {
         >
           
 
-          <Stack  flexWrap='wrap' sx={{  flexDirection:{sx:'column', md: 'row'} }}alignItems='center' justifyContent='center'>
+          <Stack flexWrap='wrap' sx={{  flexDirection:{sx:'column', md: 'row'} }}alignItems='center' justifyContent='center'>
               {/* left */}
-            <Stack  sx={{padding:{ sx: 0, md: 5}, width:{xs:'80%', md: '40%'}, alignItems:{xs:'center', md: 'flex-start'}}}>
-              <Typography fontFamily='Impact' sx={{fontSize:{xs: '2.5rem', sm: '4rem'}}}> Oi,  </Typography>
-              <Typography  color={ dark ? '#9093D8' : '#5E5E5F'}> Um texto aqui sobre mim e minha tragetória nao apenas em programacao mas em desenvolvimento e indicacao par ir ao linkedin Um texto aqui sobre mim e minha tragetória nao apenas em programacao mas em desenvolvimento e indicacao par ir ao linkedin Um texto aqui sobre mim e minha tragetória nao apenas em programacao mas em desenvolvimento e indicacao par ir ao linkedin s</Typography>
-            </Stack>
-              
+            <TitleBody title={"Oi, "} description={description}/>
               {/* right */}
-            <Stack width='50%' > 
+            <Stack sx={{ width:{xs:'90%', md: '50%'}}}> 
               <Link paddingLeft={1} color={ dark ? '#59C8D4' : "#000"} sx={{display:{xs:'none', md:'flex'}}} underline="none" href='https://www.linkedin.com/in/tainasaboia/' target="_blank" rel="noopener noreferrer">
                 <LineTitle title={'Clik aqui para ser redirecionado ao Linkedin'}/>
               </Link>
               <Stack alignItems='flex-end' width='50%'  sx={{ display: {xs:'none', sm: 'contents'}}} >
                 <Grid container  direction="row" flexWrap='wrap'>
-                  {['React Js','JavaScript', 'TypeScript','HTML5', 'CSS', 'Python', 'Django', 'VS Code', 'Git', 'Illustrator', 'Photoshop'].map((title, key) => (
+                  {skills.map((title, key) => (
                     <Grid item key={key+'grid'} textAlign='center' >
                         <Stack margin={1} bgcolor={ dark ? '#430049' : '#F3F3F3'} borderRadius={2} width='8rem' height='8rem' alignItems='center' justifyContent='center'>
                           <Avatar key={key} alt="photo perfil" src={require(`../../assets/icons/${title}.png`)} style={{ width:60, height: 'auto'}} />
@@ -51,13 +51,15 @@ export default function Skills() {
                   ))}
                 </Grid>
               </Stack>
-              <Stack alignItems='flex-end' bgcolor='red' sx={{ display: {xs:'contents', sm: 'none'}, width: {xs: '100%', sm: '50%'}}} >
+              <Stack sx={{ display: {xs:'none', sm: 'none'}, width: {xs: '60vh'}}}>
                 <Grid container direction="row" flexWrap='wrap'>
-                  {['React Js','JavaScript', 'TypeScript','HTML5', 'CSS', 'Python', 'Django', 'VS Code', 'Git', 'Illustrator', 'Photoshop'].map((title, key) => (
-                    <Grid item key={key+'grid'} textAlign='center' width='100%' >
-                        <Stack margin={1}> 
-                          <SkillsItem title={title} body={'texto aqui'}/>
-                        </Stack>
+                  {skills.map((title, key) => (
+                    <Grid item key={key+'grid'} xs={4} padding={2} margin={0.5} boxShadow='rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px' >
+                       <Stack margin={0.2} > 
+                        <Typography>
+                          {title}
+                        </Typography>
+                      </Stack>
                     </Grid>
                   ))}
                 </Grid>

@@ -26,7 +26,7 @@ export default function Contact() {
                 <TextField name='email' id="email" label="E-mail" variant="standard" />
                 <TextField name='message' id="msg" label="Mensagem" variant="standard" multiline rows={4} />
                 <Stack paddingTop={2} alignSelf='flex-end'>
-                  <Button type='submit' variant="outlined">
+                  <Button color='inherit' type='submit' variant="outlined" >
                     Enviar
                   </Button>
                 </Stack>
@@ -35,8 +35,8 @@ export default function Contact() {
         </Stack>
         <Stack marginY={5} sx={{ order: {xs: -1 ,sm: 0} , marginLeft:{xs: 0, md:5}, alignItems:{xs:'center', md: 'flex-start'}}} >
           <LineTitle title='Entre em contato'/>
-          <Typography  fontFamily='Impact'  sx={{  fontSize: { xs: '2rem', sm: '3rem', md:'4rem' } }}>Vamos conversar</Typography>
-          <Typography width='80%' color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> Preencha o formulário para esclarermos suas dúvidas e dar início ao seu projeto! </Typography>
+          <Typography  fontFamily='Impact'  sx={{  fontSize: { xs: '2.5rem', sm: '3rem', md:'4rem' } }}>Vamos conversar</Typography>
+          <Typography sx={{width:{sx:'100%', md:'80%'}}} color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> Preencha o formulário para esclarermos suas dúvidas e dar início ao seu projeto! </Typography>
         </Stack>
       </Stack>
     </Stack>
