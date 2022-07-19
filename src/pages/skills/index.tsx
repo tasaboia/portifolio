@@ -3,6 +3,7 @@ import { Avatar, Box,  Divider,  Grid, Stack, Typography } from '@mui/material'
 import { useCustomTheme } from '../../context'
 import { useFonts } from 'expo-font';
 import LineTitle from '../../components/LineTitle';
+import SkillsItem from '../../components/SkillsItem';
 
 export default function Skills() {
   const { dark } = useCustomTheme()
@@ -16,7 +17,6 @@ export default function Skills() {
     <section id='sobre'>
       <Stack>
         <Box
-          height='100vh' 
           flexWrap='wrap'
           sx={{
             display: 'flex',
@@ -40,7 +40,7 @@ export default function Skills() {
                 <Grid container  direction="row" flexWrap='wrap'>
                   {['React Js','JavaScript', 'TypeScript','HTML5', 'CSS', 'Python', 'Django', 'VS Code', 'Git', 'Illustrator', 'Photoshop'].map((title, key) => (
                     <Grid item key={key+'grid'} textAlign='center' >
-                        <Stack margin={1} bgcolor={ dark ? '#430049' : '#CCCCCC'} width='8rem' height='8rem' alignItems='center' justifyContent='center'>
+                        <Stack margin={1} bgcolor='#F3F3F3' borderRadius={2} width='8rem' height='8rem' alignItems='center' justifyContent='center'>
                           <Avatar key={key} alt="photo perfil" src={require(`../../assets/icons/${title}.png`)} style={{ width:60, height: 'auto'}} />
                           <Typography color={ dark ? '#9093D8' : '#5E5E5F'} padding={1} >{title}</Typography>
                         </Stack>
@@ -48,12 +48,12 @@ export default function Skills() {
                   ))}
                 </Grid>
               </Stack>
-              <Stack alignItems='flex-end' sx={{ display: {xs:'contents', sm: 'none'}}} >
+              <Stack alignItems='flex-end' bgcolor='red' sx={{ display: {xs:'contents', sm: 'none'}, width: {xs: '100%', sm: '50%'}}} >
                 <Grid container direction="row" flexWrap='wrap'>
                   {['React Js','JavaScript', 'TypeScript','HTML5', 'CSS', 'Python', 'Django', 'VS Code', 'Git', 'Illustrator', 'Photoshop'].map((title, key) => (
-                    <Grid item key={key+'grid'} textAlign='center' xs={5}>
-                        <Stack margin={1} bgcolor='#000' >
-                          <Typography color={ dark ? '#9093D8' : '#5E5E5F'} padding={1} >{title}</Typography>
+                    <Grid item key={key+'grid'} textAlign='center' width='100%' >
+                        <Stack margin={1}> 
+                          <SkillsItem title={title} body={'texto aqui'}/>
                         </Stack>
                     </Grid>
                   ))}

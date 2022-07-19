@@ -18,7 +18,7 @@ export default function Contact() {
       display='flex'
       margin={10}
     >
-      <Stack flexWrap='wrap' flexDirection='row' justifyContent='center'>
+      <Stack flexWrap='wrap' flexDirection='row' justifyContent='center' >
         <Stack display='block' bgcolor ={dark ? '#430049' : 'white'} padding={4} boxShadow={2} borderRadius={10} >
           <Stack justifyItems='center' sx={{ width: { sx: '60vh', sm: '80vh' } }}>
               <FormControl>
@@ -33,7 +33,7 @@ export default function Contact() {
               </FormControl>
           </Stack>
         </Stack>
-        <Stack  sx={{ order: {xs: -1 ,sm: 0} , marginLeft:{xs: 0, md:5}}}>
+        <Stack marginY={5} sx={{ order: {xs: -1 ,sm: 0} , marginLeft:{xs: 0, md:5}, alignItems:{xs:'center', md: 'flex-start'}}} >
           <LineTitle title='Entre em contato'/>
           <Typography  fontFamily='Impact'  sx={{  fontSize: { xs: '2rem', sm: '3rem', md:'4rem' } }}>Vamos conversar</Typography>
           <Typography width='80%' color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> Preencha o formulário abaixo para esclarermos suas dúvidas e dar início ao seu projeto! </Typography>
