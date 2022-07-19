@@ -14,7 +14,7 @@ export default function Projects() {
     'Inter-SemiBoldItalic': 'https://rsms.me/inter/font-files/Inter-SemiBoldItalic.otf?v=3.12',
   });
   return (
-    <section id='projects'>
+    <section id='projetos'>
       <Stack>
       <Box
         sx={{

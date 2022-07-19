@@ -28,6 +28,7 @@ export default function Skills() {
           }}
           justifyContent='center'
           alignItems='center'
+          margin={10}
         >
           
 

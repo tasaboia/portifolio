@@ -13,7 +13,7 @@ export default function Contact() {
   })
  
   return (
-    <section id='contact'>
+    <section id='contato'>
       <Stack
       display='flex'
       margin={10}
