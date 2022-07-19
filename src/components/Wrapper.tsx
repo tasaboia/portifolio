@@ -22,6 +22,17 @@ CYAN E PRETO background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%)
 VERY DARK background-color: #551838;
 background-image: linear-gradient(90deg, #551838 0%, #401e5d 50%, #000459 100%);
 
+
+MAI DARK 
+background-color: #a9005f;
+background-image: linear-gradient(58deg, #a9005f 0%, #21003e 50%, #001a2b 100%);
+
+LATERAL BRILHANTEbackground-color: #3e0025;
+background-image: linear-gradient(90deg, #3e0025 0%, #1f003c 22%, #00131d 100%);
+
+
+
+
 */
 
 
@@ -34,7 +45,7 @@ export default function Wrapper({ children} : Props) {
     <Paper
     sx={{
     backgroundColor: dark? '65043d' : '#FFF' , 
-    backgroundImage: dark ? 'linear-gradient(90deg, #551838 0%, #401e5d 50%, #000459 100%)' : null}}>
+    backgroundImage: dark ? 'linear-gradient(90deg, #3e0025 0%, #1f003c 22%, #00131d 100%)' : null}}>
         <Stack width='100%' height='100%'>
             <Nav/>  
             {/* left */}

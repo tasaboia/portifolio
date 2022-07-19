@@ -4,6 +4,7 @@ import Footer from '../footer'
 import { useCustomTheme } from '../../context'
 
 import { useFonts } from 'expo-font';
+import LineTitle from '../../components/LineTitle';
 
 export default function Contact() {
   const {dark} = useCustomTheme()
@@ -15,16 +16,10 @@ export default function Contact() {
     <section id='contact'>
       <Stack
       display='flex'
+      margin={10}
     >
-      <Stack width='100%' paddingTop={10} alignItems='center' >
-        <Stack textAlign='center' >
-          <Typography fontSize='3rem' fontFamily='Inter-SemiBoldItalic'>
-            Entre em contato
-          </Typography>
-          <Typography paddingX={5} paddingY={2} color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> Preencha o formulário abaixo para esclarermos suas dúvidas e dar início ao seu projeto! </Typography>
-        </Stack>
-        
-        <Box  marginY={5}  bgcolor ={dark ? '#9093D8' : ''} padding={4} boxShadow={2} borderRadius={10} >
+      <Stack flexWrap='wrap' flexDirection='row' justifyContent='center'>
+        <Stack display='block' bgcolor ={dark ? '#430049' : 'white'} padding={4} boxShadow={2} borderRadius={10} >
           <Stack justifyItems='center' sx={{ width: { sx: '60vh', sm: '80vh' } }}>
               <FormControl>
                 <TextField name='name' id="name" label="Digite seu nome" variant="standard" />
@@ -37,11 +32,15 @@ export default function Contact() {
                 </Stack>
               </FormControl>
           </Stack>
-        </Box>
-
+        </Stack>
+        <Stack  sx={{ order: {xs: -1 ,sm: 0} , marginLeft:{xs: 0, md:5}}}>
+          <LineTitle title='Entre em contato'/>
+          <Typography  fontFamily='Impact'  sx={{  fontSize: { xs: '2rem', sm: '3rem', md:'4rem' } }}>Vamos conversar</Typography>
+          <Typography width='80%' color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> Preencha o formulário abaixo para esclarermos suas dúvidas e dar início ao seu projeto! </Typography>
+        </Stack>
       </Stack>
     </Stack>
-      <Stack height='10vh' bgcolor={ dark ? '#9093D8': 'black' } paddingTop={3} >
+      <Stack height='20vh' bgcolor={ dark ? '#430049': 'black' } paddingTop={3} >
         <Typography color={ dark ? '#59C8D4': 'white' }  textAlign='center' >
             © Copyright 2022.
           </Typography>
