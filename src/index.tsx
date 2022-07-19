@@ -14,8 +14,8 @@ import RoutesContainer from "./routes";
 const getDesignTokens = (dark : boolean | undefined) => ({
   palette: {
     text: {
-        primary: dark ? '#00FFF0' : '#000',
-        secondary: dark ? '#00FFF0' : '#000',
+        primary: dark ? '#E1E6FF' : '#000',
+        secondary: dark ? '#E1E6FF' : '#000',
     },
   },
 });

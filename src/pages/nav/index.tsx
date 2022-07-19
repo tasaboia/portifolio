@@ -40,7 +40,7 @@ export default function Nav() {
             <Stack spacing={4} direction="row" sx={{ flexGrow: 1, justifyContent: 'center', display: { xs: 'none', md: 'flex'} }} >
               {links.map((item, key) => (
                 <Link key={key} style={{textDecoration: 'none'}} to={item.link}>
-                  <Typography key={key+'text'}  color={dark? '#05C5DF' : '#000'}>
+                  <Typography key={key+'text'}  color={dark? '#9093D8' : '#000'}>
                     {item.title}
                   </Typography>
                 </Link>
