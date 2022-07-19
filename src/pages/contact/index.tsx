@@ -14,7 +14,6 @@ export default function Contact() {
   return (
     <section id='contact'>
       <Stack
-      height='100vh'
       display='flex'
     >
       <Stack width='100%' paddingTop={10} alignItems='center' >

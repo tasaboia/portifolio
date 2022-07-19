@@ -18,7 +18,6 @@ const getDesignTokens = (dark : boolean | undefined) => ({
         secondary: dark ? '#00FFF0' : '#000',
     },
   },
-  
 });
 
 export default function Site() {

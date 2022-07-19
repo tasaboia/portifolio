@@ -37,7 +37,7 @@ export default function Home() {
           spacing={2}
         >
           <Typography color={ dark ? '#9093D8' : '#5E5E5F'} fontSize='1rem'> Tainá Saboia </Typography>
-          <Typography fontFamily='Inter-SemiBoldItalic' 
+          <Typography fontFamily='Impact' 
             sx={{ 
             fontSize: { xs: '2rem', sm: '3rem', md:'4rem' }
             }}> 

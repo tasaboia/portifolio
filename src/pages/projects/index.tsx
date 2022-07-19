@@ -2,6 +2,10 @@ import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Stack, Typogra
 import React from 'react'
 import { useFonts } from 'expo-font';
 import { useCustomTheme } from '../../context'
+import LineTitle from '../../components/LineTitle';
+
+// image={require('../../assets/images/coletiva-background-2.png')}
+// image={require('../../assets/images/app-background.png')}
 
 export default function Projects() {
   const { dark } = useCustomTheme()
@@ -16,51 +20,29 @@ export default function Projects() {
           display: 'flex',
           flexDirection: 'column',
         }}
-        height='100vh'
+        paddingY={10}
       >
-        <Stack paddingTop={10} textAlign='center'>
-          <Typography fontFamily='Inter-SemiBoldItalic' sx={{fontSize:{xs: '2rem', sm: '3rem'}}}>Projetos</Typography>
-        </Stack>
-          <Grid container sx={{ paddingLeft:{xs:0, sm: 1} , flexDirection: {xs: 'column', sm: 'row'}}} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} textAlign='center' justifyContent='center'>
-            <Grid item sx={{ alignSelf:{xs:'center'}}}>
+          <Stack flexDirection='row' flexWrap='wrap' alignItems='center'>
               <Link href="https://web-build-j6nwd1tch-tasaboia.vercel.app" underline="none" target="_blank" rel="noopener noreferrer">
-                <Card sx={{ maxWidth: 250 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="150"
-                      image={require('../../assets/images/coletiva-background-2.png')}
-                      alt="Importa Coleta"
-                    />
-                    <CardContent>
-                      <Typography color='black' gutterBottom variant="h6" component="div">
-                        Importa Coletiva
-                      </Typography>
-                    
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
+                <Box margin={.5} bgcolor={ dark ? '#430049' : '#CCCCCC'} width='600' height='60vh'>
+                  <Avatar src={require('../../assets/images/coletiva-background-2.png')} style={{ width: 300}}/>
+                </Box>
               </Link>
-            </Grid>
-            <Grid item sx={{ alignSelf:{xs:'center'}}}>
-              <Card sx={{ maxWidth: 250 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="150"
-                    image={require('../../assets/images/app-background.png')}
-                    alt="RMCenter App"
-                  />
-                  <CardContent>
-                    <Typography  color='black' gutterBottom variant="h6" component="div">
-                      Importa Coletiva
-                    </Typography>
-                    
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Grid>
-          </Grid>
+              <Link href="https://web-build-j6nwd1tch-tasaboia.vercel.app" underline="none" target="_blank" rel="noopener noreferrer">
+                <Box margin={.5} bgcolor={ dark ? '#430049' : '#CCCCCC'} width='600' height='60vh'>
+                  <Avatar src={require('../../assets/images/coletiva-background-2.png')} style={{ width: 300}}/>
+                </Box>
+              </Link>
+
+              <Stack padding={5}  width='50%'>
+                <Stack padding={2}>
+                  <LineTitle title={'Algum texto'}/>
+                </Stack>
+                <Typography  fontFamily='Impact' sx={{fontSize:{xs: '2rem', sm: '3rem'}}}> Projetos </Typography>
+                <Typography width='80%'> uma pequena texot sobre todo o projeto e como foi interessante trabalhar com novos defasio
+                </Typography>
+              </Stack>
+          </Stack>
       </Box>
     </Stack>
   </section>
