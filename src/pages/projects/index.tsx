@@ -25,20 +25,16 @@ export default function Projects() {
       >
           <Stack flexDirection='row' flexWrap='wrap' sx={{justifyContent: {xs: 'center', md: 'flex-start'}}}>
             <Link  sx={{display:{xs:'none', md:'flex'}}}  href="https://web-build-j6nwd1tch-tasaboia.vercel.app" underline="none" target="_blank" rel="noopener noreferrer">
-              <Stack margin={.5} bgcolor={ dark ? '#430049' : '#F3F3F3'} boxShadow='rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px' sx={{ width:{xs:'40vh', md:'60vh'}, height:{xs:'60vh' , md: '80vh'}}}>
+              <Stack margin={.5} sx={{ width:{xs:'40vh', md:'60vh'}, height:{xs:'60vh' , md: '80vh'}}}>
                 <Stack alignItems='center' spacing={2} paddingTop={2}>
-                  <Typography fontFamily='Impact' fontSize='3.2rem' color={ dark ? '#9093D8' : 'black'}>Importa Coletiva</Typography>
-                  <Typography width='80%' fontSize='1rem' color={ dark ? '#9093D8' : 'black'}> Projeto Mobile First, desenvolvido com React Js, JavaScript, Typescript, Native Base, React Query e Backend em C# e controle de versão GitHub</Typography>
                 </Stack>
                 <Avatar variant="square" src={require('../../assets/images/coletiva-background-2.png')} style={{ width: '100%' , height: 'auto'}}/>
               </Stack>
               
             </Link>
             <Link  sx={{display:{xs:'none', md:'flex'}}} underline="none" target="_blank" rel="noopener noreferrer">
-              <Stack margin={.5} bgcolor={ dark ? '#430049' : '#F3F3F3'}boxShadow='rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px' sx={{ width:{xs:'40vh', md:'60vh'}, height:{xs:'60vh' , md: '80vh'}}} >
+              <Stack margin={.5} sx={{ width:{xs:'40vh', md:'60vh'}, height:{xs:'60vh' , md: '80vh'}}} >
                 <Stack paddingX={2}  paddingTop={2}>
-                  <Typography fontFamily='Impact' fontSize='3.2rem' color={ dark ? '#9093D8' : 'black'}>RMCenter</Typography>
-                  <Typography paddingBottom={1} width='80%' fontSize='1rem' color={ dark ? '#9093D8' : 'black'}>Projeto desenvolvido em Expo Go para mobile, as principais tecnologias React Native, JavaScript, TypeScript, React Query, backend desenvolvido em Django</Typography>
                 </Stack>
                 <Avatar variant="square" src={require('../../assets/images/rmcenter1.png')} style={{ width: '100%' , height: 'auto'}}/>
               </Stack>

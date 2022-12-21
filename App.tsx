@@ -1,5 +1,5 @@
 import React from 'react'
-import Site from './src'
+import Site from './src/site'
 import { CustomThemeProvider } from './src/context'
 
 export default function App() {
